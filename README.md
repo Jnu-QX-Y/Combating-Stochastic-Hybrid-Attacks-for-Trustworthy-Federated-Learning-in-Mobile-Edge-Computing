@@ -1,0 +1,2 @@
+# Combating-Stochastic-Hybrid-Attacks-for-Trustworthy-Federated-Learning-in-Mobile-Edge-Computing
+本项目为论文官方开源实现，面向移动边缘计算场景下联邦学习的安全性问题，提供自编码器异常检测、连续状态POMDP自适应决策、进化状态子集优化、攻击行为聚类分类与差异化防御全流程功能。框架能够同时防御投毒攻击和搭便车攻击两类随机混合攻击，实现攻击类型识别与差异化处理。
