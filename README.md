@@ -36,8 +36,7 @@ pomdpFL/
 ├── clients_attackers.py            # 攻击客户端定义（投毒 / 搭便车）
 ├── server.py                       # 服务器端聚合与防御逻辑
 ├── dataloader.py                   # 数据加载（IID / Non-IID 划分）
-├── models/
-│   ├── init.py                     # 模型工厂
+├── models/                    
 │   ├── resnet18.py                 # ResNet18 模型
 │   └── mobilenetV2.py              # MobileNetV2 模型
 └── utils/
@@ -64,8 +63,8 @@ pomdpFL/
 
 ### 3. 攻击行为聚类与分类
 
-- **聚类**：DBSCAN 将异常客户端划分为两组
-- **分类**：多维特征分析（参数方差、更新方向一致性、重建误差、峰度、偏度）计算搭便车分数，区分投毒与搭便车攻击
+- **聚类**：聚类将异常客户端划分为两组
+- **分类**：多维特征分析区分投毒与搭便车攻击
 - **对应文件**：`utils/supervised_detector.py`
 
 ### 4. 差异化防御策略
@@ -76,7 +75,7 @@ pomdpFL/
 
 ### 5. 攻击模型
 
-- **投毒攻击**：标签翻转攻击（Label Flipping），将源类标签篡改为目标类标签
+- **投毒攻击**：标签翻转攻击，将源类标签篡改为目标类标签
 - **搭便车攻击**：噪声注入攻击，向全局模型添加高斯噪声伪装为本地更新
 - **随机混合攻击**：两类攻击在 FL 训练过程中随机并发，异常客户端以一定概率发起攻击
 - **对应文件**：`clients_attackers.py`
@@ -84,6 +83,7 @@ pomdpFL/
 ## 项目声明
 
 - **项目名称**：Combating Stochastic Hybrid Attacks for Trustworthy Federated Learning in Mobile Edge Computing
+- **作者**：Yin Qixi, Cao Kun
+- **单位**：暨南大学网络空间安全学院
 - **开发语言**：Python
 - **代码规模**：约 3400 行
-- **主要框架**：PyTorch、scikit-learn
